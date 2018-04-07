@@ -1,0 +1,124 @@
+2018-03-09 01:52:51,609 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:52:59,065 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:53:06,124 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:55:31,514 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:55:35,866 ERROR: Exception on /user/susan [GET] [in d:\workspace\flask\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\workspace\flask\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\workspace\flask\app\routes.py", line 66, in user
+    return render_template('user.html', user=user, tasks=tasks)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\workspace\flask\app\templates\user.html", line 21, in template
+    {% if tasks is not None %}
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 543, in _generate
+    optimized=self.optimized)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 82, in generate
+    generator.visit(node)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 799, in visit_Template
+    self.blockvisit(block.body, block_frame)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 378, in blockvisit
+    self.visit(node, frame)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 1160, in visit_If
+    self.blockvisit(node.body, if_frame)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 378, in blockvisit
+    self.visit(node, frame)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 1157, in visit_If
+    self.visit(node.test, if_frame)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 70, in new_func
+    return f(self, node, frame, **kwargs)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 1497, in visitor
+    self.visit(node.node, frame)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 70, in new_func
+    return f(self, node, frame, **kwargs)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 1607, in visit_Test
+    self.fail('no test named %r' % node.name, node.lineno)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: no test named 'None'
+2018-03-09 01:58:40,110 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:58:45,702 ERROR: Exception on /user/susan [GET] [in d:\workspace\flask\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\workspace\flask\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\workspace\flask\app\routes.py", line 66, in user
+    return render_template('user.html', user=user, tasks=tasks)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\templating.py", line 134, in render_template
+    context, ctx.app)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\templating.py", line 116, in _render
+    rv = template.render(context)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\workspace\flask\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\workspace\flask\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "D:\workspace\flask\app\templates\base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "D:\workspace\flask\app\templates\user.html", line 21, in block "app_content"
+    {% if len(tasks) != 0 %}
+jinja2.exceptions.UndefinedError: 'len' is undefined
+2018-03-09 02:00:18,352 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 02:03:18,395 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 02:06:45,344 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]

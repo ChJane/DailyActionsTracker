@@ -1,0 +1,71 @@
+2018-03-09 01:01:04,765 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:29:39,321 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:32:10,713 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:32:50,642 ERROR: Exception on /add_task [POST] [in d:\workspace\flask\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\workspace\flask\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\workspace\flask\app\routes.py", line 106, in add_task
+    return redirect(url_for('user'))
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 323, in url_for
+    force_external=external)
+  File "d:\workspace\flask\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user'. Did you forget to specify values ['username']?
+2018-03-09 01:34:50,968 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:34:56,410 ERROR: Exception on /add_task [POST] [in d:\workspace\flask\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\workspace\flask\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\workspace\flask\app\routes.py", line 106, in add_task
+    return redirect(url_for('current_user'))
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 323, in url_for
+    force_external=external)
+  File "d:\workspace\flask\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'current_user'. Did you mean 'register' instead?
+2018-03-09 01:41:56,080 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:47:06,555 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:47:33,810 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:48:35,055 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:48:52,086 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:49:53,606 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:50:57,971 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:51:17,653 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 01:51:34,554 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]

@@ -1,0 +1,144 @@
+2018-03-09 02:29:01,373 ERROR: Exception on /user/Проверочкин [GET] [in d:\workspace\flask\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\workspace\flask\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\workspace\flask\app\routes.py", line 66, in user
+    return render_template('user.html', user=user, tasks=tasks)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\templating.py", line 134, in render_template
+    context, ctx.app)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\templating.py", line 116, in _render
+    rv = template.render(context)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\workspace\flask\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\workspace\flask\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "D:\workspace\flask\app\templates\base.html", line 49, in block "content"
+    {% block app_content %}{% endblock %}
+  File "D:\workspace\flask\app\templates\user.html", line 43, in block "app_content"
+    <p><a href="{{ url_for('add_task') }}">Добавить задачу</a></p>
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 323, in url_for
+    force_external=external)
+  File "d:\workspace\flask\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'add_task'. Did you forget to specify values ['username']?
+2018-03-09 02:29:41,370 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 02:29:46,441 ERROR: Exception on /user/Проверочкин [GET] [in d:\workspace\flask\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\workspace\flask\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\workspace\flask\app\routes.py", line 66, in user
+    return render_template('user.html', user=user, tasks=tasks)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\templating.py", line 134, in render_template
+    context, ctx.app)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\templating.py", line 116, in _render
+    rv = template.render(context)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\workspace\flask\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\workspace\flask\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "d:\workspace\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "D:\workspace\flask\app\templates\base.html", line 49, in block "content"
+    {% block app_content %}{% endblock %}
+  File "D:\workspace\flask\app\templates\user.html", line 43, in block "app_content"
+    <p><a href="{{ url_for('add_task') }}">Добавить задачу</a></p>
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 323, in url_for
+    force_external=external)
+  File "d:\workspace\flask\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'add_task'. Did you forget to specify values ['username']?
+2018-03-09 02:30:39,442 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 02:31:34,624 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 02:31:43,710 ERROR: Exception on /add_task [POST] [in d:\workspace\flask\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\workspace\flask\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\workspace\flask\app\routes.py", line 114, in add_task
+    return redirect(url_for('user'), username=current_user.username)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 323, in url_for
+    force_external=external)
+  File "d:\workspace\flask\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user'. Did you forget to specify values ['username']?
+2018-03-09 02:32:26,531 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 02:34:59,410 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]

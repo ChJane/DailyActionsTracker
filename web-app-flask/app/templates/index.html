@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+
+    {% if current_user.is_authenticated %}
+        <h1>Привет, {{ current_user.username }}!</h1>
+    <br>
+    {% endif %}
+
+    <p>
+        Lorem ipsum dolor sit amet, purto mazim in usu. Explicari prodesset ei his, sit ei porro suscipit. Habemus alienum splendide ei duo. Ut quo diceret abhorreant. Ea dolorem vituperata ius.
+    </p>
+    <p>
+        An per dissentias necessitatibus, no maiorum propriae repudiandae eum. Vix suas percipit democritum cu, atqui facilisis per at. Ei mel copiosae iudicabit, sea nonumy omnium tincidunt ex, no pro populo nostrud voluptatum. Mea an regione aliquam expetendis. Te omnes nostrud mel. Eros nulla graecis nec no.
+    </p>
+    <p>
+        Malorum probatus ne vel, has phaedrum senserit pericula te. Ea cum tota labores singulis. Eum ex voluptatum instructior conclusionemque, duo altera inciderint ad. Atqui facilisi duo an, quas consequat id per. Ferri nihil scaevola ne usu, id quodsi iriure qui. Usu reque porro ut, mea at voluptua expetenda theophrastus.
+    </p>
+    <p>
+        Sensibus deseruisse posidonium sit an. Ut aeque tantas pri, sed cu quaeque blandit euripidis. Vel tacimates argumentum ea, nam tation soleat facilis te, sea ea possim evertitur. Qui appellantur deterruisset id. At mei regione comprehensam.
+    </p>
+    <p>
+        Dicam suscipit aliquando at his. Vim delenit mediocrem at, usu ad nibh civibus, vis tempor mentitum ei. Eos dolor equidem appareat ex, choro comprehensam mea ad. Vis te essent delicatissimi, solum explicari torquatos vix ex. Ei prima labitur has, pri clita noster neglegentur an. Vis alii paulo intellegam ad, soleat perfecto dissentiunt per eu, id delicata persequeris mea. Vis ut sale epicuri temporibus.
+    </p>
+    <p>
+        Timeam dissentias te vix, omnis signiferumque vis te. Posse possim eirmod per ad. Eam argumentum concludaturque id, no eam decore reprehendunt. Eu vel blandit forensibus, cu perpetua torquatos expetendis est, eos natum latine te. Ei mel prompta recusabo temporibus, his iisque scripta euripidis ei, cu purto elitr delicata nec. Facilis comprehensam eu pro, viderer minimum ponderum ius ei, sonet equidem ancillae an nec.
+    </p>
+
+{% endblock %}

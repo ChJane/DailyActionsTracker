@@ -1,0 +1,112 @@
+\hypertarget{classapp_1_1forms_1_1_edit_profile_form}{}\section{Класс app.\+forms.\+Edit\+Profile\+Form}
+\label{classapp_1_1forms_1_1_edit_profile_form}\index{app.\+forms.\+Edit\+Profile\+Form@{app.\+forms.\+Edit\+Profile\+Form}}
+
+
+Класс формы редактирования профиля  
+
+
+Граф наследования\+:app.\+forms.\+Edit\+Profile\+Form\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapp_1_1forms_1_1_edit_profile_form}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classapp_1_1forms_1_1_edit_profile_form_ac6fcb8c475148a0190fe489e61e33101}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classapp_1_1forms_1_1_edit_profile_form_a780b5da2adfe5fd308f3e49e83ad343f}{original\+\_\+username}}, args, kwargs)
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classapp_1_1forms_1_1_edit_profile_form_ae6dab7354d6ef7902de30f80b3fdbdfb}{validate\+\_\+username}} (self, \mbox{\hyperlink{classapp_1_1forms_1_1_edit_profile_form_a57b60e620c9d09de0968b3e456039612}{username}})
+\begin{DoxyCompactList}\small\item\em алидация имени пользователя. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classapp_1_1forms_1_1_edit_profile_form_a780b5da2adfe5fd308f3e49e83ad343f}{original\+\_\+username}}
+\end{DoxyCompactItemize}
+\subsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classapp_1_1forms_1_1_edit_profile_form_a57b60e620c9d09de0968b3e456039612}{username}} = String\+Field(\textquotesingle{}Пользователь\textquotesingle{}, validators=\mbox{[}Data\+Required()\mbox{]})
+\item 
+\mbox{\hyperlink{classapp_1_1forms_1_1_edit_profile_form_ab4d1bb9524c5cbcf8326f4df8888d24f}{about\+\_\+me}} = Text\+Area\+Field(\textquotesingle{}Обо мне\textquotesingle{}, validators=\mbox{[}Length(min=0, max=140)\mbox{]})
+\item 
+\mbox{\hyperlink{classapp_1_1forms_1_1_edit_profile_form_a75092e1817f3b7a852be060458dc1ba5}{submit}} = Submit\+Field(\textquotesingle{}Применить\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс формы редактирования профиля 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Flask\+Form} & -\/ родительский класс форм \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classapp_1_1forms_1_1_edit_profile_form_ac6fcb8c475148a0190fe489e61e33101}\label{classapp_1_1forms_1_1_edit_profile_form_ac6fcb8c475148a0190fe489e61e33101}} 
+\index{app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def app.\+forms.\+Edit\+Profile\+Form.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{original\+\_\+username,  }\item[{}]{args,  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Конструктор 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em original\+\_\+username} & -\/ имя пользователя. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classapp_1_1forms_1_1_edit_profile_form_ae6dab7354d6ef7902de30f80b3fdbdfb}\label{classapp_1_1forms_1_1_edit_profile_form_ae6dab7354d6ef7902de30f80b3fdbdfb}} 
+\index{app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}!validate\+\_\+username@{validate\+\_\+username}}
+\index{validate\+\_\+username@{validate\+\_\+username}!app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}}
+\subsubsection{\texorpdfstring{validate\+\_\+username()}{validate\_username()}}
+{\footnotesize\ttfamily def app.\+forms.\+Edit\+Profile\+Form.\+validate\+\_\+username (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+алидация имени пользователя. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em username} & -\/ имя пользователя \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classapp_1_1forms_1_1_edit_profile_form_ab4d1bb9524c5cbcf8326f4df8888d24f}\label{classapp_1_1forms_1_1_edit_profile_form_ab4d1bb9524c5cbcf8326f4df8888d24f}} 
+\index{app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}!about\+\_\+me@{about\+\_\+me}}
+\index{about\+\_\+me@{about\+\_\+me}!app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}}
+\subsubsection{\texorpdfstring{about\+\_\+me}{about\_me}}
+{\footnotesize\ttfamily app.\+forms.\+Edit\+Profile\+Form.\+about\+\_\+me = Text\+Area\+Field(\textquotesingle{}Обо мне\textquotesingle{}, validators=\mbox{[}Length(min=0, max=140)\mbox{]})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1forms_1_1_edit_profile_form_a780b5da2adfe5fd308f3e49e83ad343f}\label{classapp_1_1forms_1_1_edit_profile_form_a780b5da2adfe5fd308f3e49e83ad343f}} 
+\index{app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}!original\+\_\+username@{original\+\_\+username}}
+\index{original\+\_\+username@{original\+\_\+username}!app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}}
+\subsubsection{\texorpdfstring{original\+\_\+username}{original\_username}}
+{\footnotesize\ttfamily app.\+forms.\+Edit\+Profile\+Form.\+original\+\_\+username}
+
+\mbox{\Hypertarget{classapp_1_1forms_1_1_edit_profile_form_a75092e1817f3b7a852be060458dc1ba5}\label{classapp_1_1forms_1_1_edit_profile_form_a75092e1817f3b7a852be060458dc1ba5}} 
+\index{app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}!submit@{submit}}
+\index{submit@{submit}!app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}}
+\subsubsection{\texorpdfstring{submit}{submit}}
+{\footnotesize\ttfamily app.\+forms.\+Edit\+Profile\+Form.\+submit = Submit\+Field(\textquotesingle{}Применить\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1forms_1_1_edit_profile_form_a57b60e620c9d09de0968b3e456039612}\label{classapp_1_1forms_1_1_edit_profile_form_a57b60e620c9d09de0968b3e456039612}} 
+\index{app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}!username@{username}}
+\index{username@{username}!app\+::forms\+::\+Edit\+Profile\+Form@{app\+::forms\+::\+Edit\+Profile\+Form}}
+\subsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily app.\+forms.\+Edit\+Profile\+Form.\+username = String\+Field(\textquotesingle{}Пользователь\textquotesingle{}, validators=\mbox{[}Data\+Required()\mbox{]})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+app/\mbox{\hyperlink{forms_8py}{forms.\+py}}\end{DoxyCompactItemize}

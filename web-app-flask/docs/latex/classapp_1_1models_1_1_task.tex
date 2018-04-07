@@ -1,0 +1,100 @@
+\hypertarget{classapp_1_1models_1_1_task}{}\section{Класс app.\+models.\+Task}
+\label{classapp_1_1models_1_1_task}\index{app.\+models.\+Task@{app.\+models.\+Task}}
+
+
+Класс активностей  
+
+
+Граф наследования\+:app.\+models.\+Task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapp_1_1models_1_1_task}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classapp_1_1models_1_1_task_a878962473a5595e85e499f7572bd9ebd}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Представление объекта \mbox{\hyperlink{classapp_1_1models_1_1_task}{Task}} при печати. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_task_aad4ef074a554fa0ffe977cd4b934275a}{id}} = db.\+Column(db.\+Integer, primary\+\_\+key=True)
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_task_aeab47ec2eef251bb3cb1b34f7ae140df}{task}} = db.\+Column(db.\+String(64), unique=True)
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_task_af0ef177b07b0af27261c072ed5e550ee}{description}} = db.\+Column(db.\+String(128))
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_task_aca1ae8c419c42f9122c02d0c788672cd}{start}} = db.\+Column(db.\+Date\+Time, index=True)
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_task_a5fd4eea12e4fd7a4db19f3a04bf2a32f}{stop}} = db.\+Column(db.\+Date\+Time, index=True)
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_task_a72b3ad4ca2c7c9d47262523bc91526ae}{user\+\_\+id}} = db.\+Column(db.\+Integer, db.\+Foreign\+Key(\textquotesingle{}user.\+id\textquotesingle{}))
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс активностей 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em db.\+Model} & -\/ класс моделей S\+Q\+L\+Alchemy \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classapp_1_1models_1_1_task_a878962473a5595e85e499f7572bd9ebd}\label{classapp_1_1models_1_1_task_a878962473a5595e85e499f7572bd9ebd}} 
+\index{app\+::models\+::\+Task@{app\+::models\+::\+Task}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}!app\+::models\+::\+Task@{app\+::models\+::\+Task}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+repr\+\_\+\+\_\+()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def app.\+models.\+Task.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Представление объекта \mbox{\hyperlink{classapp_1_1models_1_1_task}{Task}} при печати. 
+
+
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classapp_1_1models_1_1_task_af0ef177b07b0af27261c072ed5e550ee}\label{classapp_1_1models_1_1_task_af0ef177b07b0af27261c072ed5e550ee}} 
+\index{app\+::models\+::\+Task@{app\+::models\+::\+Task}!description@{description}}
+\index{description@{description}!app\+::models\+::\+Task@{app\+::models\+::\+Task}}
+\subsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily app.\+models.\+Task.\+description = db.\+Column(db.\+String(128))\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_task_aad4ef074a554fa0ffe977cd4b934275a}\label{classapp_1_1models_1_1_task_aad4ef074a554fa0ffe977cd4b934275a}} 
+\index{app\+::models\+::\+Task@{app\+::models\+::\+Task}!id@{id}}
+\index{id@{id}!app\+::models\+::\+Task@{app\+::models\+::\+Task}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily app.\+models.\+Task.\+id = db.\+Column(db.\+Integer, primary\+\_\+key=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_task_aca1ae8c419c42f9122c02d0c788672cd}\label{classapp_1_1models_1_1_task_aca1ae8c419c42f9122c02d0c788672cd}} 
+\index{app\+::models\+::\+Task@{app\+::models\+::\+Task}!start@{start}}
+\index{start@{start}!app\+::models\+::\+Task@{app\+::models\+::\+Task}}
+\subsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily app.\+models.\+Task.\+start = db.\+Column(db.\+Date\+Time, index=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_task_a5fd4eea12e4fd7a4db19f3a04bf2a32f}\label{classapp_1_1models_1_1_task_a5fd4eea12e4fd7a4db19f3a04bf2a32f}} 
+\index{app\+::models\+::\+Task@{app\+::models\+::\+Task}!stop@{stop}}
+\index{stop@{stop}!app\+::models\+::\+Task@{app\+::models\+::\+Task}}
+\subsubsection{\texorpdfstring{stop}{stop}}
+{\footnotesize\ttfamily app.\+models.\+Task.\+stop = db.\+Column(db.\+Date\+Time, index=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_task_aeab47ec2eef251bb3cb1b34f7ae140df}\label{classapp_1_1models_1_1_task_aeab47ec2eef251bb3cb1b34f7ae140df}} 
+\index{app\+::models\+::\+Task@{app\+::models\+::\+Task}!task@{task}}
+\index{task@{task}!app\+::models\+::\+Task@{app\+::models\+::\+Task}}
+\subsubsection{\texorpdfstring{task}{task}}
+{\footnotesize\ttfamily app.\+models.\+Task.\+task = db.\+Column(db.\+String(64), unique=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_task_a72b3ad4ca2c7c9d47262523bc91526ae}\label{classapp_1_1models_1_1_task_a72b3ad4ca2c7c9d47262523bc91526ae}} 
+\index{app\+::models\+::\+Task@{app\+::models\+::\+Task}!user\+\_\+id@{user\+\_\+id}}
+\index{user\+\_\+id@{user\+\_\+id}!app\+::models\+::\+Task@{app\+::models\+::\+Task}}
+\subsubsection{\texorpdfstring{user\+\_\+id}{user\_id}}
+{\footnotesize\ttfamily app.\+models.\+Task.\+user\+\_\+id = db.\+Column(db.\+Integer, db.\+Foreign\+Key(\textquotesingle{}user.\+id\textquotesingle{}))\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+app/\mbox{\hyperlink{models_8py}{models.\+py}}\end{DoxyCompactItemize}

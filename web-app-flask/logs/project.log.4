@@ -1,0 +1,125 @@
+2018-03-09 02:07:41,599 ERROR: Exception on /add_task [POST] [in d:\workspace\flask\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: task.task
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\workspace\flask\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\workspace\flask\app\routes.py", line 104, in add_task
+    db.session.commit()
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\session.py", line 943, in commit
+    self.transaction.commit()
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\session.py", line 467, in commit
+    self._prepare_impl()
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2254, in flush
+    self._flush(objects)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2380, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\util\compat.py", line 187, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2344, in _flush
+    flush_context.execute()
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 556, in execute
+    uow
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\util\compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "d:\workspace\flask\venv\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: task.task [SQL: 'INSERT INTO task (task, description, start, stop, user_id) VALUES (?, ?, ?, ?, ?)'] [parameters: ('fsdfdsfs', 'sasSA', '2018-03-08 19:07:41.597461', None, 2)] (Background on this error at: http://sqlalche.me/e/gkpj)
+2018-03-09 02:14:08,452 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 02:14:25,215 ERROR: Exception on /add_task [POST] [in d:\workspace\flask\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\workspace\flask\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\workspace\flask\app\routes.py", line 113, in add_task
+    return redirect(url_for('user/'+current_user))
+  File "d:\workspace\flask\venv\lib\site-packages\werkzeug\local.py", line 408, in <lambda>
+    __radd__ = lambda x, o: o + x._get_current_object()
+TypeError: Can't convert 'User' object to str implicitly
+2018-03-09 02:14:54,230 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
+2018-03-09 02:15:09,650 ERROR: Exception on /add_task [POST] [in d:\workspace\flask\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\workspace\flask\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\workspace\flask\app\routes.py", line 113, in add_task
+    return redirect(url_for('user/'+current_user.username))
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "d:\workspace\flask\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "d:\workspace\flask\venv\lib\site-packages\flask\helpers.py", line 323, in url_for
+    force_external=external)
+  File "d:\workspace\flask\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user/ѕроверочкин'. Did you mean 'user' instead?
+2018-03-09 02:16:47,099 INFO: Project стартовал [in D:\workspace\flask\app\logger.py:19]
