@@ -1,0 +1,119 @@
+\hypertarget{classapp_1_1forms_1_1_registration_form}{}\section{Класс app.\+forms.\+Registration\+Form}
+\label{classapp_1_1forms_1_1_registration_form}\index{app.\+forms.\+Registration\+Form@{app.\+forms.\+Registration\+Form}}
+
+
+Класс формы регистрации  
+
+
+Граф наследования\+:app.\+forms.\+Registration\+Form\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapp_1_1forms_1_1_registration_form}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classapp_1_1forms_1_1_registration_form_a69ecc2875e684131ba0eeb9451e9c47c}{validate\+\_\+username}} (self, \mbox{\hyperlink{classapp_1_1forms_1_1_registration_form_ac4f31c06a04cfadf0ecf269bcb65c29b}{username}})
+\begin{DoxyCompactList}\small\item\em Валидация имени пользователя. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classapp_1_1forms_1_1_registration_form_a03ad81c1e7ea6eaad93fb503be3f6f4b}{validate\+\_\+email}} (self, \mbox{\hyperlink{classapp_1_1forms_1_1_registration_form_af98d363c036c4b9afcf8ac4bc2d3ee6a}{email}})
+\begin{DoxyCompactList}\small\item\em Валидация адреса e-\/mail. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classapp_1_1forms_1_1_registration_form_ac4f31c06a04cfadf0ecf269bcb65c29b}{username}} = String\+Field(\textquotesingle{}Пользователь\textquotesingle{}, validators=\mbox{[}Data\+Required()\mbox{]})
+\item 
+\mbox{\hyperlink{classapp_1_1forms_1_1_registration_form_af98d363c036c4b9afcf8ac4bc2d3ee6a}{email}} = String\+Field(\textquotesingle{}Email\textquotesingle{}, validators=\mbox{[}Data\+Required(), Email()\mbox{]})
+\item 
+\mbox{\hyperlink{classapp_1_1forms_1_1_registration_form_a20158cd008a957749d4315a3acbdc114}{password}} = Password\+Field(\textquotesingle{}Пароль\textquotesingle{}, validators=\mbox{[}Data\+Required()\mbox{]})
+\item 
+\mbox{\hyperlink{classapp_1_1forms_1_1_registration_form_a29d1668141132f75f709ae0d02ae4a2c}{password2}}
+\item 
+\mbox{\hyperlink{classapp_1_1forms_1_1_registration_form_a64e8b7e4c4567cdd41fb495c8473748a}{submit}} = Submit\+Field(\textquotesingle{}Зарегистрироваться\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс формы регистрации 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Flask\+Form} & -\/ родительский класс форм \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classapp_1_1forms_1_1_registration_form_a03ad81c1e7ea6eaad93fb503be3f6f4b}\label{classapp_1_1forms_1_1_registration_form_a03ad81c1e7ea6eaad93fb503be3f6f4b}} 
+\index{app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}!validate\+\_\+email@{validate\+\_\+email}}
+\index{validate\+\_\+email@{validate\+\_\+email}!app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}}
+\subsubsection{\texorpdfstring{validate\+\_\+email()}{validate\_email()}}
+{\footnotesize\ttfamily def app.\+forms.\+Registration\+Form.\+validate\+\_\+email (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{email }\end{DoxyParamCaption})}
+
+
+
+Валидация адреса e-\/mail. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & -\/ электронная почта \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classapp_1_1forms_1_1_registration_form_a69ecc2875e684131ba0eeb9451e9c47c}\label{classapp_1_1forms_1_1_registration_form_a69ecc2875e684131ba0eeb9451e9c47c}} 
+\index{app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}!validate\+\_\+username@{validate\+\_\+username}}
+\index{validate\+\_\+username@{validate\+\_\+username}!app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}}
+\subsubsection{\texorpdfstring{validate\+\_\+username()}{validate\_username()}}
+{\footnotesize\ttfamily def app.\+forms.\+Registration\+Form.\+validate\+\_\+username (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+Валидация имени пользователя. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em username} & -\/ имя пользователя \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classapp_1_1forms_1_1_registration_form_af98d363c036c4b9afcf8ac4bc2d3ee6a}\label{classapp_1_1forms_1_1_registration_form_af98d363c036c4b9afcf8ac4bc2d3ee6a}} 
+\index{app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}!email@{email}}
+\index{email@{email}!app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}}
+\subsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily app.\+forms.\+Registration\+Form.\+email = String\+Field(\textquotesingle{}Email\textquotesingle{}, validators=\mbox{[}Data\+Required(), Email()\mbox{]})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1forms_1_1_registration_form_a20158cd008a957749d4315a3acbdc114}\label{classapp_1_1forms_1_1_registration_form_a20158cd008a957749d4315a3acbdc114}} 
+\index{app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}!password@{password}}
+\index{password@{password}!app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}}
+\subsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily app.\+forms.\+Registration\+Form.\+password = Password\+Field(\textquotesingle{}Пароль\textquotesingle{}, validators=\mbox{[}Data\+Required()\mbox{]})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1forms_1_1_registration_form_a29d1668141132f75f709ae0d02ae4a2c}\label{classapp_1_1forms_1_1_registration_form_a29d1668141132f75f709ae0d02ae4a2c}} 
+\index{app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}!password2@{password2}}
+\index{password2@{password2}!app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}}
+\subsubsection{\texorpdfstring{password2}{password2}}
+{\footnotesize\ttfamily app.\+forms.\+Registration\+Form.\+password2\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}
+=  PasswordField(
+        \textcolor{stringliteral}{'Повторите пароль'}, validators=[DataRequired(), EqualTo(\textcolor{stringliteral}{'password'})])
+\end{DoxyCode}
+\mbox{\Hypertarget{classapp_1_1forms_1_1_registration_form_a64e8b7e4c4567cdd41fb495c8473748a}\label{classapp_1_1forms_1_1_registration_form_a64e8b7e4c4567cdd41fb495c8473748a}} 
+\index{app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}!submit@{submit}}
+\index{submit@{submit}!app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}}
+\subsubsection{\texorpdfstring{submit}{submit}}
+{\footnotesize\ttfamily app.\+forms.\+Registration\+Form.\+submit = Submit\+Field(\textquotesingle{}Зарегистрироваться\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1forms_1_1_registration_form_ac4f31c06a04cfadf0ecf269bcb65c29b}\label{classapp_1_1forms_1_1_registration_form_ac4f31c06a04cfadf0ecf269bcb65c29b}} 
+\index{app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}!username@{username}}
+\index{username@{username}!app\+::forms\+::\+Registration\+Form@{app\+::forms\+::\+Registration\+Form}}
+\subsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily app.\+forms.\+Registration\+Form.\+username = String\+Field(\textquotesingle{}Пользователь\textquotesingle{}, validators=\mbox{[}Data\+Required()\mbox{]})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+app/\mbox{\hyperlink{forms_8py}{forms.\+py}}\end{DoxyCompactItemize}

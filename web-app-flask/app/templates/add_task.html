@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+    <h1>Добавить задачу</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <form action="" method="post">
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.task.label }}<br>
+                    {{ form.task(size=32) }}
+                </p>
+                <p>
+                    {{ form.description.label }}<br>
+                    {{ form.description(size=32) }}
+                </p>
+
+                <p>{{ form.submit() }}</p>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

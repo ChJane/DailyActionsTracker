@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <table class="table table-hover">
+        <tr>
+            <td width="256px"><img src="{{ user.avatar(256) }}"></td>
+            <td>
+                <h1>User: {{ user.username }}</h1>
+                {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+                {% if user.last_seen %}<p>Последний раз был: {{ user.last_seen }}</p>{% endif %}
+                {% if user == current_user %}
+                <p><a href="{{ url_for('edit_profile') }}">Редактировать профиль</a></p>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+    {% if user == current_user %}
+
+        <table class="table table-hover">
+            <tr>
+                <td>Задача</td><td>Описание</td><td>Начало</td><td>Конец</td>
+            </tr>
+            {% for task in tasks %}
+            <tr>
+                <td>
+                    <b>{{ task.task }}</b>
+                </td>
+                <td>
+                    {{ task.description }}
+                </td>
+                <td>
+                    {{ task.start }}
+                </td>
+                <td>
+                    {{ task.stop }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <p><a href="{{ url_for('add_task') }}">Добавить задачу</a></p>
+    {% endif %}
+{% endblock %}

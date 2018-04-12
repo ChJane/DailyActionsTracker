@@ -1,0 +1,161 @@
+\hypertarget{classapp_1_1models_1_1_user}{}\section{Класс app.\+models.\+User}
+\label{classapp_1_1models_1_1_user}\index{app.\+models.\+User@{app.\+models.\+User}}
+
+
+Класс пользователей  
+
+
+Граф наследования\+:app.\+models.\+User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapp_1_1models_1_1_user}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classapp_1_1models_1_1_user_a7569b5686d9aa38eb081b4d811338d9f}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Представление объекта \mbox{\hyperlink{classapp_1_1models_1_1_user}{User}} при печати. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classapp_1_1models_1_1_user_aa8be40797a363177fd35d541da309297}{set\+\_\+password}} (self, password)
+\begin{DoxyCompactList}\small\item\em Установка пароля. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classapp_1_1models_1_1_user_ab75430896da76337b5eb18763f2a18c3}{check\+\_\+password}} (self, password)
+\begin{DoxyCompactList}\small\item\em Проверка пароля \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classapp_1_1models_1_1_user_afbfdcc8d14cb2c09cca368406be71764}{avatar}} (self, size)
+\begin{DoxyCompactList}\small\item\em Установка аватара. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_user_ad28c4b49ed1a0a093e086410d9da2df2}{id}} = db.\+Column(db.\+Integer, primary\+\_\+key=True)
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_user_aec05013ad6d15a43fcd996241fc32912}{username}} = db.\+Column(db.\+String(64), index=True, unique=True)
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_user_abede62bbd3c533d9532f44a7181bb970}{email}} = db.\+Column(db.\+String(120), index=True, unique=True)
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_user_a80ee86a4974fc0e6ae597288d2e2fe43}{password\+\_\+hash}} = db.\+Column(db.\+String(128))
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_user_a9d486736caa6cb4e1878bf6ec022ba36}{tasks}} = db.\+relationship(\textquotesingle{}\mbox{\hyperlink{classapp_1_1models_1_1_task}{Task}}\textquotesingle{}, backref=\textquotesingle{}author\textquotesingle{}, lazy=\textquotesingle{}dynamic\textquotesingle{})
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_user_ae73eebfaf616e6c86471d14b89f18a85}{about\+\_\+me}} = db.\+Column(db.\+String(140))
+\item 
+\mbox{\hyperlink{classapp_1_1models_1_1_user_a9b0d23d616421ef30c01e87bb92f6aea}{last\+\_\+seen}} = db.\+Column(db.\+Date\+Time, default=datetime.\+utcnow)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс пользователей 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em User\+Mixin} & -\/ класс, который включает в себя общие реализации классов пользовательских моделей \\
+\hline
+{\em db.\+Model} & -\/ класс моделей S\+Q\+L\+Alchemy \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_a7569b5686d9aa38eb081b4d811338d9f}\label{classapp_1_1models_1_1_user_a7569b5686d9aa38eb081b4d811338d9f}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+repr\+\_\+\+\_\+()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def app.\+models.\+User.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Представление объекта \mbox{\hyperlink{classapp_1_1models_1_1_user}{User}} при печати. 
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_afbfdcc8d14cb2c09cca368406be71764}\label{classapp_1_1models_1_1_user_afbfdcc8d14cb2c09cca368406be71764}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!avatar@{avatar}}
+\index{avatar@{avatar}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{avatar()}{avatar()}}
+{\footnotesize\ttfamily def app.\+models.\+User.\+avatar (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{size }\end{DoxyParamCaption})}
+
+
+
+Установка аватара. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em size} & -\/ размер аватара. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_ab75430896da76337b5eb18763f2a18c3}\label{classapp_1_1models_1_1_user_ab75430896da76337b5eb18763f2a18c3}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!check\+\_\+password@{check\+\_\+password}}
+\index{check\+\_\+password@{check\+\_\+password}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{check\+\_\+password()}{check\_password()}}
+{\footnotesize\ttfamily def app.\+models.\+User.\+check\+\_\+password (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{password }\end{DoxyParamCaption})}
+
+
+
+Проверка пароля 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em password} & -\/ пароль \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_aa8be40797a363177fd35d541da309297}\label{classapp_1_1models_1_1_user_aa8be40797a363177fd35d541da309297}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!set\+\_\+password@{set\+\_\+password}}
+\index{set\+\_\+password@{set\+\_\+password}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{set\+\_\+password()}{set\_password()}}
+{\footnotesize\ttfamily def app.\+models.\+User.\+set\+\_\+password (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{password }\end{DoxyParamCaption})}
+
+
+
+Установка пароля. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em password} & -\/ пароль На основе пароля создается хэш, который и хранится \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_ae73eebfaf616e6c86471d14b89f18a85}\label{classapp_1_1models_1_1_user_ae73eebfaf616e6c86471d14b89f18a85}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!about\+\_\+me@{about\+\_\+me}}
+\index{about\+\_\+me@{about\+\_\+me}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{about\+\_\+me}{about\_me}}
+{\footnotesize\ttfamily app.\+models.\+User.\+about\+\_\+me = db.\+Column(db.\+String(140))\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_abede62bbd3c533d9532f44a7181bb970}\label{classapp_1_1models_1_1_user_abede62bbd3c533d9532f44a7181bb970}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!email@{email}}
+\index{email@{email}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily app.\+models.\+User.\+email = db.\+Column(db.\+String(120), index=True, unique=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_ad28c4b49ed1a0a093e086410d9da2df2}\label{classapp_1_1models_1_1_user_ad28c4b49ed1a0a093e086410d9da2df2}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!id@{id}}
+\index{id@{id}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily app.\+models.\+User.\+id = db.\+Column(db.\+Integer, primary\+\_\+key=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_a9b0d23d616421ef30c01e87bb92f6aea}\label{classapp_1_1models_1_1_user_a9b0d23d616421ef30c01e87bb92f6aea}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!last\+\_\+seen@{last\+\_\+seen}}
+\index{last\+\_\+seen@{last\+\_\+seen}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{last\+\_\+seen}{last\_seen}}
+{\footnotesize\ttfamily app.\+models.\+User.\+last\+\_\+seen = db.\+Column(db.\+Date\+Time, default=datetime.\+utcnow)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_a80ee86a4974fc0e6ae597288d2e2fe43}\label{classapp_1_1models_1_1_user_a80ee86a4974fc0e6ae597288d2e2fe43}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!password\+\_\+hash@{password\+\_\+hash}}
+\index{password\+\_\+hash@{password\+\_\+hash}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{password\+\_\+hash}{password\_hash}}
+{\footnotesize\ttfamily app.\+models.\+User.\+password\+\_\+hash = db.\+Column(db.\+String(128))\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_a9d486736caa6cb4e1878bf6ec022ba36}\label{classapp_1_1models_1_1_user_a9d486736caa6cb4e1878bf6ec022ba36}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!tasks@{tasks}}
+\index{tasks@{tasks}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{tasks}{tasks}}
+{\footnotesize\ttfamily app.\+models.\+User.\+tasks = db.\+relationship(\textquotesingle{}\mbox{\hyperlink{classapp_1_1models_1_1_task}{Task}}\textquotesingle{}, backref=\textquotesingle{}author\textquotesingle{}, lazy=\textquotesingle{}dynamic\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classapp_1_1models_1_1_user_aec05013ad6d15a43fcd996241fc32912}\label{classapp_1_1models_1_1_user_aec05013ad6d15a43fcd996241fc32912}} 
+\index{app\+::models\+::\+User@{app\+::models\+::\+User}!username@{username}}
+\index{username@{username}!app\+::models\+::\+User@{app\+::models\+::\+User}}
+\subsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily app.\+models.\+User.\+username = db.\+Column(db.\+String(64), index=True, unique=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+app/\mbox{\hyperlink{models_8py}{models.\+py}}\end{DoxyCompactItemize}
